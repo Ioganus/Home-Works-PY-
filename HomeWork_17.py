@@ -24,7 +24,6 @@ else:
 # Меняем список строк на список чисел
 list_sequence_numbers = [int(item) for item in sequence_numbers]
 
-########################################################################
 # Сортировка списка
 
 def merge_sort(L):
