@@ -426,3 +426,59 @@
 # # ОТКРЫТИЕ ФАЙЛА
 # myFile = open("filename.txt","rt",encoding = "utf8")
 # print (myFile.read())
+
+
+# # ----------------------------------------ООП----------------------------------------------
+
+# class Event:
+#     def __init__(self, timestamp, event_type, session_id):
+#         self.timestamp = timestamp
+#         self.type = event_type
+#         self.session_id = session_id
+# events = [
+#     {
+#         "timestamp": 1554583508000,
+#         "type": "itemViewEvent",
+#         "session_id": "0:NynteeXG:MYlskrqZbcmXNSFEJaZIsNVGeDLLpmct",
+#     },
+#     {
+#         "timestamp": 1555296337000,
+#         "type": "itemViewEvent",
+#         "session_id": "0:NynteeXG:MYlskrqZbcmXNSFEJaZIsNVGeDLLpmct",
+#     },
+#     {
+#         "timestamp": 1549461608000,
+#         "type": "itemBuyEvent",
+#         "session_id": "0:NynteeXG:MYlskrqZbcmXNSFEJaZIsNVGeDLLpmct",
+#     },
+# ]
+# for event in events:
+#     event_obj = Event(timestamp=event.get("timestamp"),
+#                         event_type=event.get("type"),
+#                         session_id=event.get("session_id"))
+#     print(event_obj.timestamp)
+
+
+# # Команда проекта «Дом питомца» планирует большой корпоратив для своих клиентов. 
+# # Вам необходимо написать программу, которая позволит составить список гостей. 
+# # В класс «Клиент» добавьте метод, который будет возвращать информацию только 
+# # об имени, фамилии и городе клиента.
+# # Затем создайте список, в который будут добавлены все клиенты, и выведете его в консоль.
+
+# class Customers:
+#     def __init__(self, first_name,second_name,city, balance):
+#         self.first_name = first_name
+#         self.second_name = second_name
+#         self.balance = balance
+#         self.city=city
+#     def __str__(self):
+#         return f'''"{self.first_name} {self.second_name}". {self.city}. Баланс: {self.balance} руб.'''
+
+#     def get_guest(self):
+#         return f'{self.first_name} {self.second_name},г. {self.city}'
+# costomer_1 = Customers('Иван','Петров','Москва',50)
+# costomer_2 = Customers('Владимир','Зайцев','Кострома',50)
+# costomer_3 = Customers('Олеся','Янина','Новосибирск',50)
+# guest_list=[costomer_1,costomer_2,costomer_3]
+# for guest in guest_list:
+#     print(guest.get_guest())
