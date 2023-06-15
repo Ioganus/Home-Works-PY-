@@ -482,3 +482,43 @@
 # guest_list=[costomer_1,costomer_2,costomer_3]
 # for guest in guest_list:
 #     print(guest.get_guest())
+
+
+# РАБОТА С БИБЛИОТЕКАМИ, НАПИСАНИЕ БОТА, ИМПОРТИРОВАНИЕ и т.д
+# import requests
+
+# r = requests.get('https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=html') # делаем запрос на сервер по переданному адресу
+# print(r.content)
+# -----------------------------------------------------------------
+
+# import requests
+# import json # импортируем необходимую библиотеку
+
+# r = requests.get('https://baconipsum.com/api/?type=meat-and-filler')
+# texts = json.loads(r.content) # делаем из полученных байтов python объект для удобной работы
+# print(type(texts)) # проверяем тип сконвертированных данных
+
+# for text in texts: # выводим полученный текст. Но для того чтобы он влез в консоль оставим только первые 50 символов.
+#     print(text[:50], '\n')
+# ----------------------------------------------------------------
+
+# # ПРЕОБРАЗОВАНИЕ ДАННЫХ В СЛОВАРЬ PYTHON
+
+# import requests
+# import json
+
+# r = requests.get('https://api.github.com')
+# d = json.loads(r.content) # делаем из полученных байтов python объект для удобной работы
+
+# print(type(d))
+# print(d['following_url']) # обращаемся к полученному объекту как к словарю 
+#                           # и попробуем напечатать одно из его значений
+# ----------------------------------------------------------------------------------------
+
+# import requests
+# import json
+
+# r = requests.get('https://baconipsum.com/api/?type=meat-and-filler')
+# r = json.loads(r.content)
+
+# print(r[0])
